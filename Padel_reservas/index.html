@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Canchas de Pádel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <h1>Reserva tu Cancha de Pádel</h1>
+            <img src="imagenes/padel.jpg" alt="Cancha de Pádel" class="decorative-image">
+            <form id="reservaForm" action="php/create.php" method="POST">
+                <label for="fecha">Fecha de la Reserva:</label>
+                <input type="date" id="fecha" name="fecha" required>
+    
+                <label for="horaInicio">Hora de Inicio:</label>
+                <input type="time" id="horaInicio" name="horaInicio" required>
+    
+                <label for="horaFin">Hora de Fin:</label>
+                <input type="time" id="horaFin" name="horaFin" required>
+    
+                <label for="comentarios">Comentarios (Opcional):</label>
+                <textarea id="comentarios" name="comentarios"></textarea>
+    
+                <button type="submit">Reservar</button>
+            </form>
+        </div>
+        <div class="reservas-container">
+            <h2>Lista de Reservas</h2>
+            <div id="reservas">
+                <!-- Aquí se cargarán las reservas -->
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
